@@ -7,7 +7,9 @@
 - install
 
     git clone http://github.com/alaafterain/linux-home.git ~/
+
     git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
     vim +BundleInstall! +qa
 
 ## fluxbox
