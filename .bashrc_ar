@@ -1,0 +1,12 @@
+# ~/.bashrc +. ~/.bashrc_ar
+
+export LC_CTYPE="zh_CN.UTF-8"
+export XIM=fcitx
+export GTK_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+
+export AR_SCRIPTS_ROOT=~/.ar_scripts/
+source ${AR_SCRIPTS_ROOT}/auth.sh
+[ -e ${SSH_AUTH_SOCK} ] || ssh-agent -s > ${AR_SCRIPTS_ROOT}/auth.sh && source ${AR_SCRIPTS_ROOT}/auth.sh
+
+[ -e ~/.bashrc_ar_local ] && source ~/.bashrc_ar_local
