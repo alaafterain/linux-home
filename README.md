@@ -39,3 +39,11 @@
 ## inputrc
 
 - .inputrc
+
+## bashrc
+
+- .bashrc_ar
+
+- install
+
+    add "source ~/.bashrc_ar" to ~/.bashrc
