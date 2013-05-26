@@ -1,0 +1,4 @@
+linux-home
+==========
+
+$HOME
