@@ -1,44 +1,41 @@
-linux-home
-==========
+# linux-home
 
-vim
-=======
+## vim
 
 - .vimrc
 
-fluxbox
-=======
+- install
+
+    git clone http://github.com/alaafterain/linux-home.git ~/
+    git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+    vim +BundleInstall! +qa
+
+## fluxbox
 
 - .fluxbox
 
-xmodmap
-=======
+## xmodmap
 
 - .xmodmap
 
-w3m
-=======
+## w3m
 
 - .w3m
 
-mlterm
-=======
+## mlterm
 
 - .mlterm
 
-mldonkey
-=======
+## mldonkey
 
 - .mldonkey
 
-mercurial(hg)
-=======
+## mercurial(hg)
 
 - .hgrc
 
 - .hgigonre
 
-inputrc
-=======
+## inputrc
 
 - .inputrc
