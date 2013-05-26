@@ -1,0 +1,15 @@
+.*\.pyc
+.*\.o
+.*\.d
+.*\.swp
+.*log\/.*
+.*logs\/.*
+tags
+unittest
+Session.vim
+core.*
+cscope.files
+viminfo
+.*\.log
+.*\.bak
+.*\.rej

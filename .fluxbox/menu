@@ -1,0 +1,14 @@
+[begin] (fluxbox)
+[include] (/etc/X11/fluxbox/fluxbox-menu)
+[separator] 
+[submenu] (wallpapers)
+	[wallpapers] (~/.fluxbox/backgrounds/)
+[end]
+[exec] (lock screen) {xscreensaver-command -lock}
+#[exec] (reboot) {xterm -e "sudo reboot"}
+#[exec] (shutdown) {xterm -e "sudo shutdown -h now"}
+#[exec] (reboot) {sudo shutdown -r now}
+#[exec] (shutdown) {sudo shutdown -h now}
+[exec] (reboot) {~/.fluxbox/yesno.sh "reboot" "sudo shutdown -r now"}
+[exec] (shutdown) {~/.fluxbox/yesno.sh "shutdown" "sudo shutdown -h now"}
+[end]

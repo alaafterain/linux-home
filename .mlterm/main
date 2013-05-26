@@ -1,0 +1,9 @@
+fontsize = 15
+fg_color = lightgray
+bg_color = black
+screen_width_ratio = 100
+screen_height_ratio = 100
+vertical_mode = none
+use_anti_alias = true
+scrollbar_mode = right
+scrollbar_view_name = mozmodern

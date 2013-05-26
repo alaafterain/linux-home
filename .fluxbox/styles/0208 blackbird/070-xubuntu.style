@@ -1,0 +1,192 @@
+!------------------ Header Info	
+style.name:                                     xubuntu murrinastormycloud
+style.author:                                   blackbird (blackbird@cotca.de)
+style.date:                                     2/07/2008 14:00:00 (GMT+1)
+style.credits:                                  xubuntu / murrinastormycloud
+style.comments:                                 Copyright (c) 2008
+
+!------------------ Background
+!rootCommand:                                   bsetbg -tile C:\blackbox\backgrounds\c0d3box.jpg
+
+!------------------ Toolbar
+toolbar.appearance:                             flat solid border
+toolbar.foregroundcolor:                        #eaeaea
+toolbar.textColor:                              #000000
+toolbar.borderWidth:                            0
+toolbar.borderColor:                            #031f2d
+toolbar.marginWidth:                            1
+toolbar.font:                                   Calibri
+toolbar.fontHeight:                             16
+toolbar.fontWeight:                             normal
+toolbar.alignment:                              left
+toolbar.shadowX:                                0
+toolbar.shadowY:                                0
+
+toolbar.button.appearance:                      parentrelative
+
+toolbar.button.pressed.appearance:              parentrelative
+
+toolbar.label.appearance:                       parentrelative
+toolbar.label.marginWidth:                      4
+
+toolbar.windowLabel.appearance:                 flat gradient splitvertical border
+toolbar.windowLabel.color:                      #ffffff
+toolbar.windowLabel.color.splitTo:              #e9e9e9
+toolbar.windowLabel.colorTo:                    #d5d5d5
+toolbar.windowLabel.colorTo.splitTo:            #e6e6e4
+toolbar.windowLabel.borderWidth:                1
+toolbar.windowLabel.borderColor:                #898989
+toolbar.windowLabel.foregroundcolor:            #000000
+toolbar.windowLabel.textcolor:                  #000000
+toolbar.windowLabel.marginWidth:                2
+toolbar.windowLabel.shadowColor:                #1c5c75
+toolbar.windowLabel.shadowX:                    0
+toolbar.windowLabel.shadowY:                    0
+
+toolbar.clock.appearance:                       parentrelative
+toolbar.clock.shadowX:                          0
+toolbar.clock.shadowY:                          0
+
+!------------------ Menu
+menu.title.appearance:                          flat solid
+menu.title.backgroundColor:                     #ffffff
+menu.title.foregroundColor:                     #000000
+menu.title.textColor:                           #ffffff
+menu.title.borderWidth:                         0
+menu.title.marginWidth:                         0
+menu.title.font:                                Calibri
+menu.title.fontHeight:                          1
+menu.title.fontWeight:                          normal
+menu.title.alignment:                           center
+
+menu.frame.appearance:                          flat solid border
+menu.frame.backgroundColor:                     #ffffff
+menu.frame.foregroundColor:                     #000000
+menu.frame.disabledColor:                       #cecece
+menu.frame.textcolor:                           #000000
+menu.frame.borderWidth:                         1
+menu.frame.borderColor:                         #99a7b4
+menu.frame.marginWidth:                         2
+menu.frame.font:                                Calibri
+menu.frame.fontHeight:                          16
+menu.frame.fontWeight:                          normal
+menu.frame.alignment:                           left
+menu.frame.shadowColor:                         #000000
+menu.frame.shadowX:                             0
+menu.frame.shadowY:                             0
+
+menu.active.appearance:                         raised gradient splitvertical border
+menu.active.color:                              #ffffff
+menu.active.color.splitTo:                      #e9e9e9
+menu.active.colorTo:                            #d5d5d5
+menu.active.colorTo.splitTo:                    #e6e6e4
+menu.active.borderWidth:                        1
+menu.active.borderColor:                        #898989
+menu.active.foregroundcolor:                    #000000
+menu.active.textcolor:                          #000000
+menu.active.marginWidth:                        2
+menu.active.shadowColor:                        #1c5c75
+menu.active.shadowX:                            0
+menu.active.shadowY:                            0
+
+!------------------ Menu bullet Style
+menu.bullet:                                    mars
+menu.bullet.position:                           right
+
+!------------------ Menu Volume Control Style
+!menu.volume.appearance:                         flat gradient pyramid border
+!menu.volume.color1:                             #a5d2f2
+!menu.volume.color2:                             #5582c2
+!menu.volume.textColor:                          #ffffff
+!menu.volume.shadowColor:                        #000000
+!menu.volume.borderWidth:                        1
+!menu.volume.borderColor:                        #415c82
+
+!------------------ Menu Separator Style
+menu.separator.borderColor:                     #000000
+menu.separator.shadowColor:                     #000000
+menu.separator.borderWidth:                     1
+menu.separator.shadowX:                         1
+menu.separator.shadowY:                         1
+menu.separator.margin:                          2
+menu.separator.color:                           #cecece
+
+!------------------ Window
+window.font:                                    Calibri
+window.fontWeight:                              bold
+window.fontHeight:                              16
+window.alignment:                               center
+
+window.title.marginWidth:                       1
+
+window.title.focus.appearance:                  raised gradient splitvertical border
+window.title.focus.color:                       #93969f
+window.title.focus.color.splitTo:               #636571
+window.title.focus.colorTo:                     #4e505d
+window.title.focus.colorTo.splitTo:             #6b6e75
+window.title.focus.borderWidth:                 1
+window.title.focus.borderColor:                 #1c2836
+
+window.title.unfocus.appearance:                flat gradient vertical border
+window.title.unfocus.color:                     #efefef
+window.title.unfocus.colorTo:                   #e5e5e5
+window.title.unfocus.borderWidth:               1
+window.title.unfocus.borderColor:               #1c2836
+
+window.label.marginWidth:                       2
+
+window.label.focus.appearance:                  parentrelative
+window.label.focus.textcolor:                   #ffffff
+window.label.focus.shadowX:                     0
+window.label.focus.shadowY:                     0
+
+window.label.unfocus.appearance:                parentrelative
+window.label.unfocus.textcolor:                 #555555
+window.label.unfocus.shadowX:                   0
+window.label.unfocus.shadowY:                   0
+
+window.button.marginWidth:                      4
+
+window.button.focus.appearance:                 parentrelative
+window.button.focus.foregroundcolor:            #ffffff
+
+window.button.unfocus.appearance:               parentrelative
+window.button.unfocus.foregroundcolor:          #555555
+
+window.button.pressed.appearance:               parentrelative
+window.button.pressed.foregroundcolor:          #ffffff
+
+window.frame.borderWidth:                       1
+window.frame.focus.bordercolor:                 #031f2d
+window.frame.unfocus.bordercolor:               #031f2d
+
+window.handleHeight:                            1
+window.handle.focus.appearance:                 flat solid border
+window.handle.focus.backgroundColor:            #1c2836
+window.handle.focus.borderWidth:                1
+window.handle.focus.bordercolor:                #1c2836
+
+window.handle.unfocus.appearance:               flat solid border
+window.handle.unfocus.backgroundColor:          #1c2836
+window.handle.unfocus.borderWidth:              1
+window.handle.unfocus.bordercolor:              #1c2836
+
+window.grip.focus.appearance:                   flat solid border
+window.grip.focus.backgroundColor:              #1c2836
+window.grip.focus.borderColor:                  #1c2836
+
+window.grip.unfocus.appearance:                 flat solid border
+window.grip.unfocus.backgroundColor:            #1c2836
+window.grip.unfocus.borderColor:                #1c2836
+
+! ----------------- Slit
+slit.appearance:                                raised solid border
+slit.foregroundColor:                           #eaeaea
+slit.borderWidth:                               1
+slit.borderColor:                               #d1d1d1
+slit.marginWidth:                               1
+slit.shadowX:                                   0
+slit.shadowY:                                   0
+
+! --- other ---
+bevelWidth:                                     2

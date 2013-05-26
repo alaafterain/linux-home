@@ -1,0 +1,20 @@
+[ui]
+username = zhouyuan
+editor=nano
+ignore=~/.hgignore
+[extensions]
+bookmarks =
+color =
+graphlog =
+mq =
+hgsubversion =
+rebase =
+hgext.extdiff =
+[web]
+#cacerts = /etc/ssl/certs/ca-certificates.crt
+[diff]
+git = 1
+[hostfingerprints]
+bitbucket.org = 24:9c:45:8b:9c:aa:ba:55:4e:01:6d:58:ff:e4:28:7d:2a:14:ae:3b
+[extdiff]
+cmd.meld =

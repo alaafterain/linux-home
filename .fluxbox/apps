@@ -1,0 +1,18 @@
+[app] (name=fbrun)
+  [Position]	(CENTER)	{0 0}
+  [Layer]	{2}
+[end]
+[app] (name=[xX][tT]erm)
+  [Position]	(UPPERLEFT)	{0 0}
+  [Tab]		{yes}
+  [Close]	{yes}
+[end]
+[group]
+ [app] (name=[xX][tT]erm)
+ [app] (name=mlterm)
+[end]
+[app] (name=pac)
+  [Workspace]	{1}
+  [Fullscreen]	{no}
+  [Jump]	{no}
+[end]

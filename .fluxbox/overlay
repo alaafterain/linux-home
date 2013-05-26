@@ -1,0 +1,15 @@
+menu.title.font: WenQuanYi Bitmap Song-10
+menu.frame.font: WenQuanYi Bitmap Song-10
+
+window.font: WenQuanYi Bitmap Song-10
+window.title.font: WenQuanYi Bitmap Song-10
+
+toolbar.color.font: WenQuanYi Bitmap Song-10
+toolbar.workspace.font: WenQuanYi Bitmap Song-10
+toolbar.clock.font: WenQuanYi Bitmap Song-10
+
+toolbar.iconbar.focused.font: WenQuanYi Bitmap Song-10:bold
+toolbar.iconbar.unfocused.font: WenQuanYi Bitmap Song-10
+
+toolbar.height:                 18
+window.title.height:            22

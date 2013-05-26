@@ -1,0 +1,278 @@
+!
+! Modified by noccy =]
+!
+! ------------------------------------------------------------------------------
+! Style File
+! ---------------------------------------------------
+! Reference area
+! --------------
+!<appearance> 	:= parentrelative | 
+!			   [<bevel-type>] [<fill-type>] [interlaced] [border]
+!
+!    <bevel-type> 	:= sunken | flat | raised
+!
+!    <fill-type> 	:= gradient <gradient-type> | solid
+!
+!    <gradient-type> 	:= crossdiagonal | rectangle | pyramid | pipecross |
+!			   elliptic | horizontal | vertical | diagonal
+!
+! <name>.appearance description 
+! <name>.backgroundColor background color for solids 
+! <name>.color1 initial color for gradients and interlaced solids 
+! <name>.color2 target color for gradients and interlaced solids 
+! <name>.borderWidth width of the texture border in pixels 
+! <name>.borderColor color of the texture border 
+!
+! <ShadowColor Types. := toolbar.shadowColor | menu.title.shadowColor |
+!								menu.frame.shadowColor | menu.active.shadowColor | 
+!							window.label.focus.shadowColor | window.label.unfocus.shadowColor:
+!
+! For More help and options, visit:
+! http://blackboxwm.sourceforge.net/BlackboxDocumentation/BlackboxStyles/StyleSyntax
+! ------------------------------------------------------------------------------
+
+!------------------ Header Info	
+style.name:                                     xfce 4.4 version 0.70
+style.author:                                   blackbird (blackbird@cotca.de)
+style.date:                                     8/8/2006 18:10:00 (GMT+1)
+style.credits:                                  xfce 4.4
+style.comments:                                 Copyright (c) 2006
+
+!------------------ Background
+rootCommand:                                    bsetroot -full backgrounds\bbclean.png
+
+!------------------ Toolbar
+toolbar.appearance:                             raised gradient vertical border
+toolbar.color1:                                 #404040
+!#edeff2
+toolbar.color2:                                 #484a52
+!#edeff2
+toolbar.textColor:                              #f0f0f0
+!#000000
+toolbar.borderWidth:                            0
+toolbar.borderColor:                            #9ea6b2
+toolbar.marginWidth:                            1
+toolbar.font:                                   Bitsream Vers Sans
+toolbar.fontHeight:                             13
+tooblar.fontWeight:                             normal
+toolbar.alignment:                              center
+toolbar.shadowColor:                            #404244
+!#90bcbf
+
+toolbar.shadowX:                                1
+toolbar.shadowY:                                1
+
+toolbar.button.appearance:                      parentrelative
+
+toolbar.button.pressed.appearance:              parentrelative
+
+toolbar.label.appearance:                       parentrelative
+toolbar.label.marginWidth:                      5
+
+toolbar.windowLabel.appearance:                 raised gradient vertical border
+toolbar.windowLabel.color1:                     #606266
+!#ffffff
+!toolbar.windowLabel.color1:                     #383838
+!#dde0e2
+toolbar.windowLabel.colorTo:                    #72757a
+toolbar.windowLabel.borderWidth:                1
+toolbar.windowLabel.bordercolor:                #101010
+!#9ea6b2
+toolbar.windowLabel.foregroundcolor:            #000000
+toolbar.windowLabel.textcolor:                  #ffffff
+!#000000
+toolbar.windowLabel.marginWidth:                2
+toolbar.windowLabel.shadowColor:                #505050
+!#90bcbf
+toolbar.windowLabel.shadowX:                    1
+toolbar.windowLabel.shadowY:                    1
+
+
+toolbar.clock.appearance:                       parentrelative
+toolbar.clock.shadowColor:                      #90bcbf
+toolbar.clock.shadowX:                          1
+toolbar.clock.shadowY:                          1
+
+!------------------ Menu
+menu.title.appearance:                          raised gradient vertical border
+menu.title.color1:                              #444444
+menu.title.color2:                              #202020
+menu.title.textcolor:                           #ffffff
+menu.title.borderWidth:                         0
+menu.title.borderColor:                         #b3b3b3
+menu.title.marginWidth:                         2
+menu.title.font:                                Bitstream Vers Sans
+menu.title.fontHeight:                          13
+menu.title.fontWeight:                          bold
+menu.title.alignment:                           center
+menu.title.shadowColor:                         #606060
+menu.title.shadowX:                             1
+menu.title.shadowY:                             1
+
+menu.frame.appearance:                          flat solid border
+menu.frame.foregroundColor:                     #000000
+menu.frame.backgroundcolor:                     #ffffff
+menu.frame.disabledColor:                       #8e8e8a
+menu.frame.textcolor:                           #000000
+menu.frame.borderWidth:                         1
+menu.frame.borderColor:                         #b3b3b3
+menu.frame.marginWidth:                         2
+menu.frame.font:                                Bitstream Vers Sans
+menu.frame.fontHeight:                          13
+menu.frame.fontWeight:                          normal
+menu.frame.alignment:                           left
+menu.frame.shadowColor:                         #d0d0d0
+menu.frame.shadowX:                             1
+menu.frame.shadowY:                             1
+
+menu.active.appearance:                         flat gradient horizontal border
+menu.active.color1:                             #a5d2f2
+menu.active.color2:                             #5582c2
+menu.active.borderWidth:                        1
+menu.active.bordercolor:                        #415c82
+menu.active.foregroundcolor:                    #ffffff
+menu.active.textcolor:                          #ffffff
+menu.active.marginWidth:                        2
+menu.active.shadowColor:                        #808080
+menu.active.shadowX:                            1
+menu.active.shadowY:                            1
+
+!------------------ Menu bullet Style
+menu.bullet:                                    arrow
+menu.bullet.position:                           right
+
+!------------------ Menu Volume Control Style
+!menu.volume.appearance:                         flat gradient pyramid border
+!menu.volume.color1:                             #a5d2f2
+!menu.volume.color2:                             #5582c2
+!menu.volume.textColor:                          #ffffff
+!menu.volume.shadowColor:                        #000000
+!menu.volume.borderWidth:                        1
+!menu.volume.borderColor:                        #415c82
+
+!------------------ Menu Separator Style
+menu.separator.borderColor:                     #d1cfc8
+menu.separator.shadowColor:                     #000000
+menu.separator.borderWidth:                     1
+menu.separator.shadowX:                         1
+menu.separator.shadowY:                         1
+menu.separator.margin:                          0
+menu.separator.color:                           #d1cfc8
+
+
+!------------------ Window
+window.font:                                    Bitstream Vera Sans
+window.fontWeight:                              bold
+window.fontHeight:                              13
+window.alignment:                               center
+
+window.title.marginWidth:                       1
+
+window.title.focus.appearance:                  raised gradient vertical border
+window.title.focus.color1:                      #444444
+window.title.focus.color2:                      #202020
+window.title.focus.borderWidth:                 1
+window.title.focus.bordercolor:                 #232527
+
+window.title.unfocus.appearance:                raised gradient vertical border
+window.title.unfocus.color1:                    #666666
+!#f2efeb
+window.title.unfocus.color2:                    #333537
+!#d6ccc4
+window.title.unfocus.borderWidth:               1
+window.title.unfocus.bordercolor:               #3d3a38
+
+window.label.marginWidth:                       2
+
+window.label.focus.appearance:                  parentrelative
+window.label.focus.textcolor:                   #ffffff
+window.label.focus.shadowColor:                 #606060
+window.label.focus.shadowX:                     1
+window.label.focus.shadowY:                     1
+
+window.label.unfocus.appearance:                parentrelative
+window.label.unfocus.textcolor:                 #909291
+!9ea6b2
+window.label.unfocus.shadowColor:               #202020
+!ffffff
+window.label.unfocus.shadowX:                   1
+window.label.unfocus.shadowY:                   1
+
+window.button.marginWidth:                      4
+
+window.button.focus.appearance:                 raised gradient vertical border
+window.button.focus.color1:                     #4a4a4a
+window.button.focus.color2:                     #282828
+window.button.focus.borderWidth:                1
+window.button.focus.bordercolor:                #000000
+window.button.focus.foregroundcolor:            #ababab
+
+window.button.unfocus.appearance:               raised gradient vertical border
+window.button.unfocus.color1:                   #5a5a5a
+!ece8e4
+window.button.unfocus.color2:                   #383838
+!dfd6cf
+window.button.unfocus.borderWidth:              1
+window.button.unfocus.bordercolor:              #404040
+!8f8173
+window.button.unfocus.foregroundcolor:          #808080
+!111111
+
+window.button.pressed.appearance:               sunken gradient vertical border
+window.button.pressed.color1:                   #4a4a4a
+window.button.pressed.color2:                   #282828
+window.button.pressed.borderWidth:              1
+window.button.pressed.bordercolor:              #000000
+window.button.pressed.foregroundcolor:          #ababab
+
+window.frame.borderWidth:                       1
+window.frame.focus.bordercolor:                 #3d3a38
+window.frame.unfocus.bordercolor:               #3d3a38
+
+window.handleHeight:                            3
+
+! --- slit ---
+slit.appearance:                                flat solid border
+slit.color1:                                    #edeff2
+slit.color2:                                    #edeff2
+slit.borderColor:                               #9ea6b2
+slit.borderWidth:                               0
+slit.marginWidth:                               1
+
+! --- other ---
+bevelWidth:                                     2
+
+
+!<3dcc>
+4210752
+9868950
+14409955
+11908533
+14409955
+16777215
+4473924
+2105376
+16777215
+13160660
+8421504
+0
+10841658
+3487029
+8421504
+6710886
+3618099
+9540240
+13160660
+16777215
+0
+8388608
+13160660
+14330492
+16777215
+14811135
+0
+16777215
+0
+12937777
+14215660
+!</3dcc>

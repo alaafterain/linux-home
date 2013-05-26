@@ -1,0 +1,125 @@
+! -- INFO --
+style.name:                             reloaded
+style.author:                           /\/\inimal
+style.date:                             10-29-07
+style.credits:                          
+style.comments:                         
+
+! -- FONTS --
+toolbar.font:                           Tahoma
+toolbar.fontHeight:                     12
+toolbar.fontWeight:                     bold
+toolbar.alignment:                      center
+
+menu.title.fontHeight:                  12
+menu.title.font:                        Tahoma Small Cap
+menu.title.fontWeight:                  bold
+menu.title.alignment:                   center
+
+menu.frame.font:                        Tahoma
+menu.frame.fontHeight:                  12
+menu.frame.alignment:                   left
+
+window.font:                            Tahoma Small Cap
+window.fontWeight:                      bold
+window.fontHeight:                      12
+window.alignment:                       center
+
+! -- TOOLBAR --
+toolbar.appearance:                     raised gradient vertical border
+toolbar.color:                          #ddd9d1
+toolbar.colorTo:                        #bfb9aa
+toolbar.borderWidth:                    1
+toolbar.marginWidth:                    0
+toolbar.borderColor:                    #444444
+toolbar.textColor:                      #000000
+
+toolbar.button.appearance:              parentrelative
+toolbar.button.foregroundColor:         #444444
+toolbar.button.pressed.appearance:      sunken solid
+toolbar.button.pressed.backgroundColor: #d4d0c8
+toolbar.button.pressed.foregroundColor: #444444
+
+toolbar.label.appearance:               parentrelative
+toolbar.label.textColor:                #000000
+toolbar.label.marginWidth:              2
+
+toolbar.windowLabel.appearance:         raised gradient vertical border
+toolbar.windowLabel.borderWidth:        0
+toolbar.windowLabel.borderColor:        #e8ddc0
+toolbar.windowLabel.color:              #3d5770
+toolbar.windowLabel.colorTo:            #34495f
+toolbar.windowLabel.textColor:          #ffffff
+
+toolbar.clock.appearance:               parentrelative
+toolbar.clock.textColor:                #444444
+
+! -- MENU --
+menu.title.appearance:                  raised gradient vertical
+menu.title.color:                       #3d5770
+menu.title.colorTo:                     #34495f
+menu.title.textColor:                   #ffffff
+menu.title.marginWidth:                 2
+
+menu.frame.appearance:                  raised gradient vertical
+menu.frame.color:                       #ddd9d1
+menu.frame.colorTo:                     #bfb9aa
+menu.frame.borderColor:                 #444444
+menu.frame.marginWidth:                 0
+menu.frame.textColor:                   #000000
+menu.frame.disableColor:                #aaaaaa
+menu.frame.alignment:                   left
+
+menu.active.appearance:                 raised solid
+menu.active.backgroundColor:            #4e575f
+menu.active.textColor:                  #ffffff
+menu.bullet:                            arrow
+menu.bullet.position:                   right
+
+menu.separator.color:                   #999999
+
+! -- WINDOW --
+
+window.title.focus.appearance:          raised gradient vertical
+window.title.focus.color:               #ddd9d1
+window.title.focus.color2:              #bfb9aa
+window.title.unfocus.appearance:        raised gradient vertical
+window.title.unfocus.color:             #ddd9d1
+window.title.unfocus.color2:            #bfb9aa
+window.title.marginWidth:               0
+
+window.label.marginWidth:               1
+window.label.focus.appearance:          raised gradient vertical
+window.label.focus.color:               #3d5770
+window.label.focus.colorTo:             #34495f
+window.label.focus.textColor:           #ffffff
+window.label.focus.shadowX:             1
+window.label.focus.shadowY:             1
+window.label.focus.shadowColor:         #000000
+window.label.unfocus.appearance:        parentrelative
+window.label.unfocus.textColor:         #444444
+
+window.handleHeight:                    4
+window.handle.focus.appearance:         raised solid
+window.handle.focus.backgroundColor:    #eae1c7
+window.handle.unfocus.appearance:       raised solid
+window.handle.unfocus.backgroundColor:  #eae1c7
+
+window.frame.borderWidth:               1
+window.frame.focus.borderColor:         #444444
+window.frame.unfocus.borderColor:       #444444
+
+window.grip.focus.appearance:           raised gradient vertical
+window.grip.focus.color:                #3d5770
+window.grip.focus.colorTo:              #3d5770
+window.grip.unfocus.appearance:         parentrelative
+
+window.button.marginWidth:              2
+window.button.focus.appearance:         parentrelative
+window.button.focus.foregroundColor:    #444444
+window.button.unfocus.appearance:       parentrelative
+window.button.unfocus.foregroundColor:  #555555
+window.button.pressed.appearance:       sunken solid
+window.button.pressed.foregroundColor:  #000000
+
+rootCommand:  bsetroot -solid bbclean.png
