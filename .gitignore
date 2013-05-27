@@ -1,0 +1,16 @@
+.idea/
+target
+*.iml
+*.pyc
+tags
+viminfo
+cscope*
+*.swp
+*.LOG
+Session.vim
+*.jar
+*.log
+*.plugin
+hsf.configuration
+*hsf.sar
+*.class
