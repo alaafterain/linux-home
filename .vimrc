@@ -223,8 +223,8 @@ endfunction
 function! ConfigPluginClang()
     let g:clang_complete_copen = 1
     let g:clang_periodic_quickfix = 1
-    let g:clang_snippets = 1
-    let g:clang_snippets_engine = 'clang_complete'
+    "let g:clang_snippets = 1
+    "let g:clang_snippets_engine = 'clang_complete'
     "let g:clang_trailing_placeholder = 1
     let g:clang_complete_macros = 1
     let g:clang_complete_patterns = 1
