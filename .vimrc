@@ -243,6 +243,7 @@ function! CreateCscope()
 endfunction
 
 function! ConfigPluginCtrlP()
+    let g:ctrlp_working_path_mode = 0
     map <silent> <leader>t :CtrlP<cr>
     if has("gui_running")
         map <M-t> :CtrlP<CR>
