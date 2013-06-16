@@ -37,6 +37,7 @@ function! DoVundle()
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'scrooloose/nerdtree'
     Bundle 'taglist.vim'
+    Bundle 'ZenCoding.vim'
 endfunction
 function! AfterVundle()
     filetype plugin indent on
@@ -309,6 +310,13 @@ function! ConfigPluginRuby()
     let g:rubycomplete_rails = 1
 endfunction
 
+function! ConfigPluginZenCoding()
+    map <silent> <leader>zz :call zencoding#expandAbbr(3, "")<CR>
+    map <silent> <leader>zc :call zencoding#toggleComment()<CR>
+    map <silent> <leader>zn :call zencoding#moveNextPrev(0)<CR>
+    map <silent> <leader>zN :call zencoding#moveNextPrev(1)<CR>
+endfunction
+
 function! BeforePlugin()
 endfunction
 
@@ -322,6 +330,7 @@ function! DoPlugin()
     call ConfigPluginPython()
     call ConfigPluginRuby()
     call ConfigPluginTaglist()
+    call ConfigPluginZenCoding()
 endfunction
 
 function! AfterPlugin()
