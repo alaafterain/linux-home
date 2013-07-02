@@ -46,6 +46,7 @@ endfunction
 function! ConfigVimEdit()
     set autoindent
     set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set expandtab | set smarttab
+    autocmd FileType ruby,eruby,yaml set shiftwidth=2 | set softtabstop=2 | set tabstop=2 | set expandtab | set smarttab
     set wrap
     set ignorecase smartcase
     set backspace=indent,eol,start
