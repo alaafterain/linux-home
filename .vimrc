@@ -309,6 +309,14 @@ function! ConfigPluginRuby()
     let g:rubycomplete_buffer_loading = 1
     let g:rubycomplete_classes_in_global = 1
     let g:rubycomplete_rails = 1
+    map <silent> <leader>rc :Rcontroller 
+    map <silent> <leader>rf :Rfind 
+    map <silent> <leader>rg :Rgenerate 
+    map <silent> <leader>rj :Rjavascript 
+    map <silent> <leader>rm :Rmodel 
+    map <silent> <leader>rss :Rserver<CR>
+    map <silent> <leader>rsr :Rserver!<CR>
+    map <silent> <leader>rv :Rview 
 endfunction
 
 function! ConfigPluginZenCoding()
