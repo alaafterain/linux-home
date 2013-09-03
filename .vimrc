@@ -247,10 +247,13 @@ endfunction
 function! ConfigPluginCtrlP()
     let g:ctrlp_working_path_mode = 0
     map <silent> <leader>t :CtrlP<cr>
+    map <silent> <leader>T :CtrlPClearCache<cr> :CtrlP<cr>
     if has("gui_running")
         map <M-t> :CtrlP<CR>
+        map <M-T> :CtrlPClearCache<CR> :CtrlP<CR>
     else
         map <Esc>t :CtrlP<CR>
+        map <Esc>T :CtrlPClearCache<CR> :CtrlP<CR>
     endif
 endfunction
 
