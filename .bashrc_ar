@@ -7,7 +7,7 @@ export XMODIFIERS="@im=fcitx"
 
 export AR_SCRIPTS_ROOT=~/.ar_scripts/
 source ${AR_SCRIPTS_ROOT}/auth.sh
-[ -e ${SSH_AUTH_SOCK} ] || ssh-agent -s > ${AR_SCRIPTS_ROOT}/auth.sh && source ${AR_SCRIPTS_ROOT}/auth.sh
+[ -n "${SSH_AUTH_SOCK}" ] || ssh-agent -s > ${AR_SCRIPTS_ROOT}/auth.sh && source ${AR_SCRIPTS_ROOT}/auth.sh
 
 [ -e ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
 [ -e ~/.bashrc_ar_local ] && source ~/.bashrc_ar_local
