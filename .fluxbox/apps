@@ -16,3 +16,8 @@
   [Fullscreen]	{no}
   [Jump]	{no}
 [end]
+[app] (name=vmplayer)
+  [Workspace]	{3}
+  [Fullscreen]	{no}
+  [Jump]	{no}
+[end]
