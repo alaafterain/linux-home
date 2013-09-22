@@ -16,15 +16,22 @@ function start_ssh_agent()
   #/usr/bin/ssh-add;
 }
 
+function check_start_agent()
+{
+  if [ -n "${SSH_AGENT_PID}" ]; then
+    #ps ${SSH_AGENT_PID} doesn’t work under cywgin
+    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent > /dev/null
+  else
+    return 1
+  fi
+}
+
 if [ -f "${SSH_ENV}" ]; then
   . "${SSH_ENV}" > /dev/null
-  #ps ${SSH_AGENT_PID} doesn’t work under cywgin
-  ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent > /dev/null || {
-    start_ssh_agent;
-  }
-else
-  start_ssh_agent;
 fi
+check_start_agent || {
+  start_ssh_agent;
+}
 
 [ -e ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
 [ -e ~/.bashrc_ar_local ] && source ~/.bashrc_ar_local
