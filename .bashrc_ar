@@ -5,9 +5,26 @@ export XIM=fcitx
 export GTK_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
-export AR_SCRIPTS_ROOT=~/.ar_scripts/
-source ${AR_SCRIPTS_ROOT}/auth.sh
-[ -n "${SSH_AUTH_SOCK}" ] || ssh-agent -s > ${AR_SCRIPTS_ROOT}/auth.sh && source ${AR_SCRIPTS_ROOT}/auth.sh
+SSH_ENV="$HOME/.ssh/environment"
+function start_ssh_agent()
+{
+  #echo "Initialising new SSH agent..."
+  ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+  #echo succeeded
+  chmod 600 "${SSH_ENV}"
+  . "${SSH_ENV}" > /dev/null
+  #/usr/bin/ssh-add;
+}
+
+if [ -f "${SSH_ENV}" ]; then
+  . "${SSH_ENV}" > /dev/null
+  #ps ${SSH_AGENT_PID} doesn’t work under cywgin
+  ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent > /dev/null || {
+    start_ssh_agent;
+  }
+else
+  start_ssh_agent;
+fi
 
 [ -e ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
 [ -e ~/.bashrc_ar_local ] && source ~/.bashrc_ar_local
