@@ -5,5 +5,6 @@
 # Applications you want to run with fluxbox.
 # MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
 #
-source ~/tc-mount.sh
-synergys --daemon
+source ~/.ar_scripts/tc-mount.sh
+#synergys --daemon
+vmplayer /d/work/vmware/winxp/winxp-new.vmx &
