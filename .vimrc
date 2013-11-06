@@ -144,7 +144,7 @@ function! ConfigVimOther()
     set number
     set paste
     set wrap
-    set cc=80
+    set cc=81
 endfunction
 
 function! ConfigVimBell()
