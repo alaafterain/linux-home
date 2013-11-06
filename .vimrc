@@ -45,8 +45,14 @@ endfunction
 
 function! ConfigVimEdit()
     set autoindent
-    set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set expandtab | set smarttab
-    autocmd FileType ruby,eruby,yaml set shiftwidth=2 | set softtabstop=2 | set tabstop=2 | set expandtab | set smarttab
+    set shiftwidth=4
+    set tabstop=4
+    set softtabstop=4
+    set expandtab
+    set smarttab
+    autocmd FileType ruby,eruby,yaml set shiftwidth=2 | set softtabstop=2 |
+                                   \ set tabstop=2 | set expandtab |
+                                   \ set smarttab
     set wrap
     set ignorecase smartcase
     set backspace=indent,eol,start
@@ -69,9 +75,11 @@ endfunction
 
 function! ConfigVimStatusBar()
     "set ruler " Always show current positions along the bottom
-    "set rulerformat=%57(%50t[%{&ff},%Y]\ %m\ %l,%c\ %p%%%) "custom my ruler format.
+    "set rulerformat=%57(%50t[%{&ff},%Y]\ %m\ %l,%c\ %p%%%) "ruler format.
     set laststatus=2
-    set statusline=\ %F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+    set statusline=\ %F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]
+                  \\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]
+                  \[%p%%]\ [LEN=%L]
 endfunction
 
 function! SaveSession()
@@ -136,6 +144,7 @@ function! ConfigVimOther()
     set number
     set paste
     set wrap
+    set cc=80
 endfunction
 
 function! ConfigVimBell()
@@ -149,10 +158,13 @@ function! ConfigVimPrint()
     if (!IsWindows())
         "set printdevice=iP1880-series "printer, use system printer if not
         set printencoding=utf-8 "encoding of printing. use encoding if not set.
-        set printmbcharset=ISO10646 "charset of print. should be compatible with printencoding.
+        "charset of print. should be compatible with printencoding.
+        set printmbcharset=ISO10646
         "set printmbfont=r:MSungGBK-Light,c:yes
-        set printmbfont=r:STSong-Light,c:yes "打印所用字体, 在linux下,要用ghostscript里已有的字体, 不然会打印乱码.
-        "打印可选项, formfeed: 是否处理换页符, header: 页眉大小, paper:"用何种纸, duplex: 是否双面打印, syntax: 是否支持语法高
+        "打印所用字体, 在linux下,要用ghostscript里已有的字体, 不然会打印乱码.
+        set printmbfont=r:STSong-Light,c:yes
+        "打印可选项, formfeed: 是否处理换页符, header: 页眉大小,
+        " paper:"用何种纸, duplex: 是否双面打印, syntax: 是否支持语法高
         set printoptions=formfeed:y,paper:A4,duplex:on,syntax:y",header:3
         "set printheader=%<%f%h%m%=Page\ %N "打印时页眉的格式
     endif
@@ -234,9 +246,13 @@ endfunction
 
 function! CreateCscope()
     if (!IsWindows())
-        :silent !find . -iname "*.h" -or -iname "*.hpp" -or -iname "*.cpp" -or -iname "*.cc" -or -iname "*.c" -type f > cscope.files
+        :silent !find . -iname "*.h" -or -iname "*.hpp" -or
+                      \ -iname "*.cpp" -or -iname "*.cc" -or
+                      \ -iname "*.c" -type f > cscope.files
     else
-        :silent !find-msys.exe . -iname '*.h' -or -iname "*.hpp" -or -iname '*.cpp' -or -iname "*.cc" -or -iname '*.c' -type f > cscope.files
+        :silent !find-msys.exe . -iname '*.h' -or -iname "*.hpp" -or
+                               \ -iname '*.cpp' -or -iname "*.cc" -or
+                               \ -iname '*.c' -type f > cscope.files
     endif
     :exec 'silent !cscope -bq -i cscope.files'
     if (filereadable("cscope.out"))
