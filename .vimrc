@@ -18,8 +18,13 @@ endfunction
 function! BeforeVundle()
     set nocompatible
     filetype off
-    set rtp+=~/.vim/bundle/vundle/
-    call vundle#rc()
+    if (IsWindows())
+        set rtp+=$VIM/vimfiles/bundle/vundle/
+        call vundle#rc('$VIM/vimfiles/bundle/')
+    else
+        set rtp+=~/.vim/bundle/vundle/
+        call vundle#rc()
+    endif
 endfunction
 function! DoVundle()
     Bundle 'gmarik/vundle'
@@ -62,6 +67,12 @@ function! ConfigVimEncoding()
     set encoding=utf-8
     set fileencodings=utf-8,gb2312,gbk,gb18030
     set termencoding=utf-8
+    if (IsWindows())
+        source $VIMRUNTIME/delmenu.vim
+        source $VIMRUNTIME/menu.vim
+        "set langmenu=zh_CN.UTF-8
+        language messages zh_CN.utf-8
+    endif
 endfunction
 
 function! ConfigVimHighlight()
@@ -207,6 +218,11 @@ endfunction
 
 function! BeforeVim()
     call ConfigVimLeader()
+    if (IsWindows())
+        source $VIMRUNTIME/vimrc_example.vim
+        source $VIMRUNTIME/mswin.vim
+        behave mswin
+    endif
 endfunction
 
 function! DoVim()
