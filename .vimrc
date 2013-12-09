@@ -238,6 +238,7 @@ function! ConfigPluginYouCompleteMe()
     else
         map <Esc>z :YcmCompleter GoToDefinitionElseDeclaration<CR>
     endif
+    let g:EclimCompletionMethod = 'omnifunc'
 endfunction
 
 function! ConfigPluginCtrlP()
