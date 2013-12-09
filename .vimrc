@@ -31,7 +31,6 @@ function! DoVundle()
 
     Bundle 'a.vim'
     Bundle 'blackboard.vim'
-    Bundle 'clang-complete'
     Bundle 'kien/ctrlp.vim'
     Bundle 'minibufexpl.vim'
     Bundle 'orestis/pysmell'
@@ -41,7 +40,10 @@ function! DoVundle()
     Bundle 'rails.vim'
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'scrooloose/nerdtree'
+    Bundle 'scrooloose/syntastic'
     Bundle 'taglist.vim'
+    Bundle 'Valloric/ListToggle'
+    Bundle 'Valloric/YouCompleteMe'
     Bundle 'ZenCoding.vim'
 endfunction
 function! AfterVundle()
@@ -250,14 +252,9 @@ function! ConfigVim()
     call AfterVim()
 endfunction
 
-function! ConfigPluginClang()
-    let g:clang_complete_copen = 1
-    let g:clang_periodic_quickfix = 1
-    "let g:clang_snippets = 1
-    "let g:clang_snippets_engine = 'clang_complete'
-    "let g:clang_trailing_placeholder = 1
-    let g:clang_complete_macros = 1
-    let g:clang_complete_patterns = 1
+function! ConfigPluginYouCompleteMe()
+    let g:ycm_confirm_extra_conf=0
+    nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 endfunction
 
 function! CreateCscope()
@@ -366,7 +363,6 @@ endfunction
 
 function! DoPlugin()
     call ConfigPluginA()
-    call ConfigPluginClang()
     call ConfigPluginCtrlP()
     call ConfigPluginMinibufExp()
     call ConfigPluginNerdTree()
@@ -374,6 +370,7 @@ function! DoPlugin()
     call ConfigPluginPython()
     call ConfigPluginRuby()
     call ConfigPluginTaglist()
+    call ConfigPluginYouCompleteMe()
     call ConfigPluginZenCoding()
 endfunction
 
