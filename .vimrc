@@ -41,6 +41,7 @@ function! DoVundle()
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'scrooloose/nerdtree'
     Bundle 'scrooloose/syntastic'
+    Bundle 'SirVer/ultisnips'
     Bundle 'taglist.vim'
     Bundle 'Valloric/ListToggle'
     Bundle 'Valloric/YouCompleteMe'
@@ -324,6 +325,12 @@ function! ConfigPluginZenCoding()
     map <silent> <leader>zN :call zencoding#moveNextPrev(1)<CR>
 endfunction
 
+function! ConfigPluginUltiSnips()
+   let g:UltiSnipsExpandTrigger="<c-tab>"
+   let g:UltiSnipsJumpForwardTrigger="<c-tab>"
+   let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
+endfunction
+
 function! BeforePlugin()
 endfunction
 
@@ -336,6 +343,7 @@ function! DoPlugin()
     call ConfigPluginPython()
     call ConfigPluginRuby()
     call ConfigPluginTaglist()
+    call ConfigPluginUltiSnips()
     call ConfigPluginYouCompleteMe()
     call ConfigPluginZenCoding()
 endfunction
