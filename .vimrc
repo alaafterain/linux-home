@@ -108,38 +108,16 @@ function! LoadSession()
             :rviminfo viminfo
         endif
         silent! execute 'source session.vim'
-        call CreateCscope()
         redraw!
     endif
 endfunction
 
-function! ConfigCscope()
-    if has("cscope")
-        "set csprg=/usr/bin/cscope
-        set cst
-        set csto=1
-        set csverb
-        "set nocsverb
-    endif
-    if has("gui_running")
-        map <M-x> :cs find s <C-R>=expand("<cword>")<CR><CR>
-        map <M-z> :cs find g <C-R>=expand("<cword>")<CR><CR>
-    else
-        map <Esc>x :cs find s <C-R>=expand("<cword>")<CR><CR>
-        map <Esc>z :cs find g <C-R>=expand("<cword>")<CR><CR>
-    endif
-endfunction
-
 function! ForceSaveSession()
-    silent cs kill cscope.out
     execute 'mksession! session.vim'
-    call CreateCscope()
     redraw!
 endfunction
 
 function! ConfigVimSession()
-    call ConfigCscope()
-
     set sessionoptions=
     set sessionoptions+=sesdir,slash,unix,resize,winpos,buffers,folds,help
     autocmd VimEnter * call LoadSession()
@@ -210,10 +188,8 @@ endfunction
 
 function! ConfigVimShortcut()
     if has("gui_running")
-        map <M-q> :pop<CR>
         map <M-w> :bd<CR>
     else
-        map <Esc>q :pop<CR>
         map <Esc>w :bd<CR>
     endif
 endfunction
@@ -256,22 +232,10 @@ function! ConfigPluginYouCompleteMe()
     let g:ycm_confirm_extra_conf = 0
     let g:ycm_min_num_of_chars_for_completion = 1
     let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-    nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-endfunction
-
-function! CreateCscope()
-    if (!IsWindows())
-        :silent !find . -iname "*.h" -or -iname "*.hpp" -or
-                      \ -iname "*.cpp" -or -iname "*.cc" -or
-                      \ -iname "*.c" -type f > cscope.files
+    if has("gui_running")
+        map <M-z> :YcmCompleter GoToDefinitionElseDeclaration<CR>
     else
-        :silent !find-msys.exe . -iname '*.h' -or -iname "*.hpp" -or
-                               \ -iname '*.cpp' -or -iname "*.cc" -or
-                               \ -iname '*.c' -type f > cscope.files
-    endif
-    :exec 'silent !cscope -bq -i cscope.files'
-    if (filereadable("cscope.out"))
-        :silent cs add cscope.out
+        map <Esc>z :YcmCompleter GoToDefinitionElseDeclaration<CR>
     endif
 endfunction
 
