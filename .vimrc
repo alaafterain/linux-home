@@ -31,6 +31,7 @@ function! DoVundle()
 
     Bundle 'a.vim'
     Bundle 'blackboard.vim'
+    Bundle 'EasyGrep'
     Bundle 'kien/ctrlp.vim'
     Bundle 'minibufexpl.vim'
     Bundle 'orestis/pysmell'
@@ -239,6 +240,8 @@ function! ConfigPluginYouCompleteMe()
         map <Esc>z :YcmCompleter GoToDefinitionElseDeclaration<CR>
     endif
     let g:EclimCompletionMethod = 'omnifunc'
+    map <leader>yd :YcmDiags<CR>
+    map <leader>ys :YcmRestartServer<CR>
 endfunction
 
 function! ConfigPluginCtrlP()
@@ -332,12 +335,22 @@ function! ConfigPluginUltiSnips()
    let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
 endfunction
 
+function! ConfigPluginEasyGrep()
+    map <silent> <Leader>go <plug>EgMapGrepOptions
+    map <silent> <Leader>gr <plug>EgMapReplaceCurrentWord_r
+    map <silent> <Leader>gR <plug>EgMapReplaceCurrentWord_R
+    map <silent> <Leader>gs <plug>EgMapGrepCurrentWord_v
+    map <silent> <Leader>gS <plug>EgMapGrepCurrentWord_V
+    map <silent> <Leader>gu :ReplaceUndo<CR>
+endfunction
+
 function! BeforePlugin()
 endfunction
 
 function! DoPlugin()
     call ConfigPluginA()
     call ConfigPluginCtrlP()
+    call ConfigPluginEasyGrep()
     call ConfigPluginMinibufExp()
     call ConfigPluginNerdTree()
     call ConfigPluginNerdCommenter()
