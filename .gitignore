@@ -15,3 +15,15 @@ session.vim
 hsf.configuration
 *hsf.sar
 *.class
+.sconsign.dblite
+*.o
+.fuse_hidden*
+*.obj
+Debug*/
+Release*/
+*.exe
+*.res
+*.manifest
+*vcproj.*.user
+*.ncb
+*.suo
