@@ -184,8 +184,13 @@ function! ConfigVimLeader()
 endfunction
 
 function! ConfigVimrc()
-    map <silent> <leader>lv :source $HOME/.vimrc<cr>
-    map <silent> <leader>ev :e $HOME/.vimrc<cr>
+    if (IsWindows())
+        map <silent> <leader>lv :source $VIM/_vimrc<cr>
+        map <silent> <leader>ev :e $VIM/_vimrc<cr>
+    else
+        map <silent> <leader>lv :source $HOME/.vimrc<cr>
+        map <silent> <leader>ev :e $HOME/.vimrc<cr>
+    endif
 endfunction
 
 function! ConfigVimShortcut()
