@@ -356,11 +356,11 @@ function! ConfigPluginVimWiki()
     let g:vimwiki_hl_cb_checked = 1
     " 是否在计算字串长度时用特别考虑中文字符
     let g:vimwiki_CJK_length = 1
-    map <leader>wt <Plug>VimwikiToggleListItem
+    map <silent> <leader>w<leader>d <Plug>VimwikiToggleListItem
 endfunction
 
 function! ConfigPluginCalendar()
-    map <silent> <Leader>wc :Calendar<CR>
+    map <silent> <Leader>w<leader>c :Calendar<CR>
 endfunction
 
 function! BeforePlugin()
