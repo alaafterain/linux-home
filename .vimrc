@@ -31,6 +31,7 @@ function! DoVundle()
 
     Bundle 'a.vim'
     Bundle 'blackboard.vim'
+    Bundle 'calendar.vim--Matsumoto'
     Bundle 'EasyGrep'
     Bundle 'kien/ctrlp.vim'
     Bundle 'minibufexpl.vim'
@@ -46,6 +47,7 @@ function! DoVundle()
     Bundle 'taglist.vim'
     Bundle 'Valloric/ListToggle'
     Bundle 'Valloric/YouCompleteMe'
+    Bundle 'vimwiki'
     Bundle 'ZenCoding.vim'
 endfunction
 function! AfterVundle()
@@ -349,11 +351,24 @@ function! ConfigPluginEasyGrep()
     map <silent> <Leader>gu :ReplaceUndo<CR>
 endfunction
 
+function! ConfigPluginVimWiki()
+    " 标记为完成的 checklist 项目会有特别的颜色
+    let g:vimwiki_hl_cb_checked = 1
+    " 是否在计算字串长度时用特别考虑中文字符
+    let g:vimwiki_CJK_length = 1
+    map <leader>wt <Plug>VimwikiToggleListItem
+endfunction
+
+function! ConfigPluginCalendar()
+    map <silent> <Leader>wc :Calendar<CR>
+endfunction
+
 function! BeforePlugin()
 endfunction
 
 function! DoPlugin()
     call ConfigPluginA()
+    call ConfigPluginCalendar()
     call ConfigPluginCtrlP()
     call ConfigPluginEasyGrep()
     call ConfigPluginMinibufExp()
@@ -363,6 +378,7 @@ function! DoPlugin()
     call ConfigPluginRuby()
     call ConfigPluginTaglist()
     call ConfigPluginUltiSnips()
+    call ConfigPluginVimWiki()
     call ConfigPluginYouCompleteMe()
     call ConfigPluginZenCoding()
 endfunction
