@@ -27,3 +27,4 @@ Release*/
 *vcproj.*.user
 *.ncb
 *.suo
+.ycm_extra_conf.py
