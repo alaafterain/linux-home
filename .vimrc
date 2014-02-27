@@ -252,6 +252,17 @@ function! ConfigPluginYouCompleteMe()
 endfunction
 
 function! ConfigPluginCtrlP()
+    if (IsWindows())
+        set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+    else
+        set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
+    endif
+    "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+    let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/]\.(git|hg|svn|vendor)$',
+      \ 'file': '\v\.(exe|so|dll)$',
+      \ 'link': 'some_bad_symbolic_links',
+      \ }
     let g:ctrlp_working_path_mode = 0
     map <silent> <leader>t :CtrlP<cr>
     map <silent> <leader>T :CtrlPClearCache<cr> :CtrlP<cr>
@@ -356,6 +367,7 @@ function! ConfigPluginVimWiki()
     let g:vimwiki_hl_cb_checked = 1
     " 是否在计算字串长度时用特别考虑中文字符
     let g:vimwiki_CJK_length = 1
+    let g:vimwiki_list = [{'path': '~/.vim/vimwiki', 'path_html': '~/vim/vimwiki/html'}]
     map <silent> <leader>w<leader>d <Plug>VimwikiToggleListItem
 endfunction
 
