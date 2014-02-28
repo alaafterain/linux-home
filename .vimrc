@@ -34,6 +34,7 @@ function! DoVundle()
     Bundle 'calendar.vim--Matsumoto'
     Bundle 'EasyGrep'
     Bundle 'kien/ctrlp.vim'
+    Bundle 'Mark--Karkat'
     Bundle 'minibufexpl.vim'
     Bundle 'orestis/pysmell'
     Bundle 'pep8'
@@ -375,6 +376,10 @@ function! ConfigPluginCalendar()
     map <silent> <Leader>w<leader>c :Calendar<CR>
 endfunction
 
+function! ConfigPluginMark()
+    map <silent> <Leader>mc :MarkClear<CR>
+endfunction
+
 function! BeforePlugin()
 endfunction
 
@@ -383,6 +388,7 @@ function! DoPlugin()
     call ConfigPluginCalendar()
     call ConfigPluginCtrlP()
     call ConfigPluginEasyGrep()
+    call ConfigPluginMark()
     call ConfigPluginMinibufExp()
     call ConfigPluginNerdTree()
     call ConfigPluginNerdCommenter()
