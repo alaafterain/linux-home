@@ -41,7 +41,6 @@ fbsetbg -C -F ~/.fluxbox/backgrounds/backgrounds.jpg
 # wmnd &
 # wmsmixer -w &
 # idesk &
-xmodmap ~/.xmodmap
 fcitx &
 xscreensaver -no-splash &
 nm-applet &
@@ -54,6 +53,7 @@ gnome-settings-daemon &
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
 
+xmodmap ~/.xmodmap
 exec /usr/bin/fluxbox
 # or if you want to keep a log:
 # exec /usr/bin/fluxbox -log "/home/zhouyuan/.fluxbox/log"

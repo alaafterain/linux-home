@@ -5,6 +5,9 @@
 # Applications you want to run with fluxbox.
 # MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
 #
+source ~/.ar_scripts/work_screen.sh
 source ~/.ar_scripts/tc-mount.sh
 #synergys --daemon
-vmplayer /d/work/vmware/winxp/winxp-new.vmx &
+#vmplayer /d/work/vmware/winxp/winxp-new.vmx &
+vmplayer /d/work/vmware/win7-vmware/win7.vmx &
+#virtualbox ~/VirtualBox\ VMs/win7-x64/win7-x64.vbox &

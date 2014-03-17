@@ -21,3 +21,8 @@
   [Fullscreen]	{no}
   [Jump]	{no}
 [end]
+[app] (name=VirtualBox)
+  [Workspace]	{3}
+  [Fullscreen]	{no}
+  [Jump]	{no}
+[end]
