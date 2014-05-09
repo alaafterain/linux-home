@@ -47,3 +47,12 @@
 - install
 
     add "source ~/.bashrc_ar" to ~/.bashrc
+
+## tmux
+
+- .tmux.conf
+
+- tmuxinator
+
+  export EDITOR='vim'
+  gem install tmuxinator

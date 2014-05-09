@@ -35,3 +35,5 @@ check_start_agent || {
 
 [ -e ~/.rvm/scripts/rvm ] && source ~/.rvm/scripts/rvm
 [ -e ~/.bashrc_ar_local ] && source ~/.bashrc_ar_local
+
+export EDITOR='vim'
