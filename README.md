@@ -56,3 +56,13 @@
 
   export EDITOR='vim'
   gem install tmuxinator
+
+## zsh
+
+- install
+
+  chsh -s `which zsh`
+
+- oh-my-zsh
+
+## autojump
