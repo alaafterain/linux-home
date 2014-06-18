@@ -1,68 +1,28 @@
 # linux-home
 
-## vim
+## install
 
-- .vimrc
+    curl -L https://github.com/alaafterain/linux-home/blob/master/.ar_scripts/ar-home.sh | sh
 
-- install
+## manually
 
-    git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
-    vim +BundleInstall +qa
-
-## fluxbox
-
-- .fluxbox
-
-## xmodmap
-
-- .xmodmap
-
-## w3m
-
-- .w3m
-
-## mlterm
-
-- .mlterm
-
-## mldonkey
-
-- .mldonkey
-
-## mercurial(hg)
-
-- .hgrc
-
-- .hgigonre
-
-## inputrc
-
-- .inputrc
-
-## bashrc
-
-- .bashrc_ar
-
-- install
-
-    add "source ~/.bashrc_ar" to ~/.bashrc
-
-## tmux
-
-- .tmux.conf
+- rvm[ruby-1.9.3]
 
 - tmuxinator
 
   export EDITOR='vim'
   gem install tmuxinator
 
-## zsh
+- truecrypt
 
-- install
+- vagrant
+
+- vim[YouCompleteMe]
+
+- vim[BundleInstall]
+
+    vim +BundleInstall +qa
+
+- zsh
 
   chsh -s `which zsh`
-
-- oh-my-zsh
-
-## autojump
