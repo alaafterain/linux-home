@@ -10,6 +10,10 @@
 
   rvm install 1.9.3
 
+  gem sources --remove https://rubygems.org/
+
+  gem sources -a http://ruby.taobao.org/
+
 - tmuxinator
 
   export EDITOR='vim' && gem install tmuxinator
