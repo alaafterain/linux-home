@@ -8,7 +8,7 @@
 
 - rvm[ruby-1.9.3]
 
-  ruby install 1.9.3
+  rvm install 1.9.3
 
 - tmuxinator
 
