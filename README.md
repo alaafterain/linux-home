@@ -12,8 +12,7 @@
 
 - tmuxinator
 
-  export EDITOR='vim'
-  gem install tmuxinator
+  export EDITOR='vim' && gem install tmuxinator
 
 - truecrypt
 
@@ -21,8 +20,7 @@
 
 - vim[YouCompleteMe]
 
-  cd ~/.vim/bundle/YouCompleteMe
-  ./install.sh --clang-completer
+  cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
 
 - vim[BundleInstall]
 
