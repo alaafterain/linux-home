@@ -2,7 +2,7 @@
 
 ## install
 
-    curl -L https://gist.github.com/alaafterain/df16565031c5ba552a6c/raw/f21b68704c8c4a6af25fcb4fec02dcdbad1b235f/ar-home.sh | sh
+    curl -L https://gist.github.com/alaafterain/df16565031c5ba552a6c/raw/a79e957d9979c637fdbf8607105633653f07eee7/ar-home.sh | sh
 
 ## manually
 

@@ -1,5 +1,8 @@
 set -e
 
+echo "\033[0;32mconfigure sudo\033[0m"
+sudo sh -c "echo \"$USER ALL=(ALL) NOPASSWD:ALL\" > /etc/sudoers.d/$USER"
+
 echo "\033[0;32mapt sources[mirrors.163.com]\033[0m"
 sudo sed -i 's/archive.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list
 sudo sed -i 's/security.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list
