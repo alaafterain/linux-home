@@ -8,6 +8,8 @@
 
 - rvm[ruby-1.9.3]
 
+  ruby install 1.9.3
+
 - tmuxinator
 
   export EDITOR='vim'
@@ -18,6 +20,9 @@
 - vagrant
 
 - vim[YouCompleteMe]
+
+  cd ~/.vim/bundle/YouCompleteMe
+  ./install.sh --clang-completer
 
 - vim[BundleInstall]
 

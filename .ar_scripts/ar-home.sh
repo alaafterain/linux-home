@@ -24,6 +24,7 @@ sed -i -e 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' 
 packages=$packages' alsa-utils'
 packages=$packages' autojump'
 packages=$packages' axel'
+packages=$packages' cmake'
 packages=$packages' curl'
 packages=$packages' evince'
 packages=$packages' fcitx'
@@ -34,6 +35,7 @@ packages=$packages' launchy'
 packages=$packages' mlterm'
 packages=$packages' mercurial'
 packages=$packages' nginx'
+packages=$packages' python-dev'
 packages=$packages' shutter'
 packages=$packages' sdcv'
 packages=$packages' tmux'
@@ -64,8 +66,8 @@ if [ ! -d "$HOME/.stardict/dic" ]; then
     tar jxf $HOME/.stardict/dic/stardict-langdao-ce-gb-2.4.2.tar.bz2 -C $HOME/.stardict/dic
 fi
 
-echo "\033[0;32mtmux\033[0m"
-export EDITOR='vim' && gem install tmuxinator
+#echo "\033[0;32mtmux\033[0m"
+#export EDITOR='vim' && gem install tmuxinator
 
 echo "\033[0;32mvim\033[0m"
 if [ ! -d "$HOME/.vim/bundle/vundle" ]; then
@@ -76,11 +78,11 @@ echo "\033[0;32mzsh\033[0m"
 #chsh -s `which zsh`
 curl -L http://install.ohmyz.sh | sh
 
-#vim +BundleInstall +qa
-manual_packages=$manual_packages' truecrypt'
+manual_packages=$manual_packages' rvm[ruby-1.9.3]'
+manual_packages=$manual_packages', tmuxinator'
+manual_packages=$manual_packages', truecrypt'
 manual_packages=$manual_packages', vagrant'
 manual_packages=$manual_packages', vim[YouCompleteMe], vim [BundleInstall]'
-manual_packages=$manual_packages', rvm[ruby-1.9.3]'
 echo "\033[0;32minstall $manual_packages manually\033[0m"
 
 echo "\033[0;32msucessed!\033[0m"
