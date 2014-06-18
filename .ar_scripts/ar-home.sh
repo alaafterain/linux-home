@@ -3,10 +3,10 @@ set -e
 echo "\033[0;32mapt sources[mirrors.163.com]\033[0m"
 sudo sed -i 's/archive.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list
 sudo sed -i 's/security.ubuntu.com/mirrors.163.com/' /etc/apt/sources.list
-
+sudo apt-get update
 
 echo "\033[0;32minstall git\033[0m"
-sudo apt-get install git
+sudo apt-get -y install git
 
 echo "\033[0;32minstall ar-home\033[0m"
 if [ ! -d "$HOME/linux-home" ]; then
@@ -16,9 +16,8 @@ if [ ! -d "$HOME/linux-home" ]; then
 fi
 
 echo "\033[0;32minstall rvm\033[0m"
-sudo apt-get install build-essential
+sudo apt-get -y install build-essential
 curl -sSL https://get.rvm.io | bash -s stable
-source ~/.bashrc
 sed -i -e 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' $HOME/.rvm/config/db
 
 packages=$packages' alsa-utils'
@@ -66,16 +65,12 @@ if [ ! -d "$HOME/.stardict/dic" ]; then
     tar jxf $HOME/.stardict/dic/stardict-langdao-ce-gb-2.4.2.tar.bz2 -C $HOME/.stardict/dic
 fi
 
-#echo "\033[0;32mtmux\033[0m"
-#export EDITOR='vim' && gem install tmuxinator
-
 echo "\033[0;32mvim\033[0m"
 if [ ! -d "$HOME/.vim/bundle/vundle" ]; then
     git clone http://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
 fi
 
 echo "\033[0;32mzsh\033[0m"
-#chsh -s `which zsh`
 curl -L http://install.ohmyz.sh | sh
 
 manual_packages=$manual_packages' rvm[ruby-1.9.3]'
