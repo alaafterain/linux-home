@@ -9,6 +9,14 @@ function! IsWindows()
     fi
 endfunction
 
+function! IsMac()
+    if (has('macunix'))
+        return 1
+    else
+        return 0
+    end
+endfunction
+
 function! ConfigVundle()
     call BeforeVundle()
     call DoVundle()
@@ -303,6 +311,9 @@ function! ConfigPluginNerdCommenter()
 endfunction
 
 function! ConfigPluginTaglist()
+    if (IsMac())
+        let g:Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+    endif
     let g:Tlist_Show_One_File = 1
     let g:Tlist_Exit_OnlyWindow = 1
     let g:Tlist_Use_Right_Window = 1
