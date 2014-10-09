@@ -286,6 +286,7 @@ function! ConfigPluginCtrlP()
 endfunction
 
 function! ConfigPluginA()
+    map <leader>a :A<CR>
     if has("gui_running")
         map <M-a> :A<CR>
     else
